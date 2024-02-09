@@ -23,3 +23,18 @@ def list_tasks(tasks):
             status = "Completed" if task["completed"] else "Incomplete"
             print(f"ID: {task['id']}, Title: {task['title']}, Description: {task['description']}, Status: {status}")
     print(Style.RESET_ALL)
+
+# Function to mark a task as complete
+def mark_complete(tasks):
+    print(Back.YELLOW + Fore.WHITE + "Mark Task as Complete")
+    task_id = input("Enter task ID to mark complete: ")
+    found = False
+    for task in tasks:
+        if task["id"] == task_id:
+            task["completed"] = True
+            found = True
+            print(Fore.YELLOW + "Task marked completed!")
+            break
+    if not found:
+        print(Fore.RED + "Task ID not found!")
+    print(Style.RESET_ALL)
