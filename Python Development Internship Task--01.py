@@ -57,19 +57,4 @@ def delete_task(tasks):
     if not found:
         print(Fore.RED + "Task ID not found!")
     print(Style.RESET_ALL)
-    
-# Function to delete a task
 
-def delete_task(tasks):
-    print(Back.RED + Fore.WHITE + "Delete Task")
-    task_id = input("Enter task ID to delete: ")
-    found = False
-    for i, task in enumerate(tasks):
-        if task["id"] == task_id:
-            del tasks[i]
-            found = True
-            print(Fore.RED + "Task deleted successfully!")
-            break
-    if not found:
-        print(Fore.RED + "Task ID not found!")
-    print(Style.RESET_ALL)
