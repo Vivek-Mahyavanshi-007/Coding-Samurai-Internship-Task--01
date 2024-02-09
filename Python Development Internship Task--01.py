@@ -5,6 +5,7 @@ import uuid
 init(autoreset=True)
 
 # Function to add a task
+
 def add_task(tasks):
     print(Back.GREEN + Fore.WHITE + "Add Task")
     title = input("Enter task title: ")
@@ -14,6 +15,7 @@ def add_task(tasks):
     print(Style.RESET_ALL + Fore.GREEN + "Task added successfully!")
     
 # Function to list all tasks
+
 def list_tasks(tasks):
     print(Back.BLUE + Fore.WHITE + "List Tasks")
     if not tasks:
@@ -25,6 +27,7 @@ def list_tasks(tasks):
     print(Style.RESET_ALL)
 
 # Function to mark a task as complete
+
 def mark_complete(tasks):
     print(Back.YELLOW + Fore.WHITE + "Mark Task as Complete")
     task_id = input("Enter task ID to mark complete: ")
@@ -34,6 +37,38 @@ def mark_complete(tasks):
             task["completed"] = True
             found = True
             print(Fore.YELLOW + "Task marked completed!")
+            break
+    if not found:
+        print(Fore.RED + "Task ID not found!")
+    print(Style.RESET_ALL)
+
+# Function to delete a task
+
+def delete_task(tasks):
+    print(Back.RED + Fore.WHITE + "Delete Task")
+    task_id = input("Enter task ID to delete: ")
+    found = False
+    for i, task in enumerate(tasks):
+        if task["id"] == task_id:
+            del tasks[i]
+            found = True
+            print(Fore.RED + "Task deleted successfully!")
+            break
+    if not found:
+        print(Fore.RED + "Task ID not found!")
+    print(Style.RESET_ALL)
+    
+# Function to delete a task
+
+def delete_task(tasks):
+    print(Back.RED + Fore.WHITE + "Delete Task")
+    task_id = input("Enter task ID to delete: ")
+    found = False
+    for i, task in enumerate(tasks):
+        if task["id"] == task_id:
+            del tasks[i]
+            found = True
+            print(Fore.RED + "Task deleted successfully!")
             break
     if not found:
         print(Fore.RED + "Task ID not found!")
