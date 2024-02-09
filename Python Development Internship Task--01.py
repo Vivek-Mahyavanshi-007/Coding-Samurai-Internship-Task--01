@@ -58,3 +58,10 @@ def delete_task(tasks):
         print(Fore.RED + "Task ID not found!")
     print(Style.RESET_ALL)
 
+# Function to save tasks to a file
+
+def save_tasks(tasks, filename):
+    with open(filename, "w") as file:
+        for task in tasks:
+            file.write(f"ID: {task['id']},\nTitle: {task['title']},\nDescription: {task['description']},\nCompleted: {task['completed']}\n")
+    print(Fore.GREEN + f"Tasks saved to '{filename}'")
