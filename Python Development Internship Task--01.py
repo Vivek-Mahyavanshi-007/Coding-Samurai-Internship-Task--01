@@ -13,4 +13,13 @@ def add_task(tasks):
     tasks.append({"title": title, "description": description, "id": unique_id, "completed": False})
     print(Style.RESET_ALL + Fore.GREEN + "Task added successfully!")
     
-    
+# Function to list all tasks
+def list_tasks(tasks):
+    print(Back.BLUE + Fore.WHITE + "List Tasks")
+    if not tasks:
+        print("No tasks found!")
+    else:
+        for task in tasks:
+            status = "Completed" if task["completed"] else "Incomplete"
+            print(f"ID: {task['id']}, Title: {task['title']}, Description: {task['description']}, Status: {status}")
+    print(Style.RESET_ALL)
