@@ -2,12 +2,12 @@
 
 A Python Command-Line "To-Do List Application" For Managing Tasks. Users can Add, List, Mark as Complete/Incomplete, and Delete Tasks. Tasks are Saved to a Text File for Persistence. Developed For a Python Development Internship to Practice Data Structures, User Input, and File Handling.
 
-Hello Everyone, I am thrilled to announce that I have Successfully Completed the To-Do List Application (Task Manager) Project as part of my Python Programming Internship with Coding Samurai.
+Hello Everyone, I am thrilled to announce that I have Successfully Completed the To-Do List Application (Task Manager) Project as part of my Python Programming Internship with Coding Samurai. 🎓 
 
-To-Do List Application (Task Manager) Project -- 01- Developed during Python Programming Internship with Coding Samurai 🎓 
+To-Do List Application (Task Manager) Project -- 01-  
 
 Introduction:
-Welcome to the demonstration of the Task Manager project, developed during my internship in Python programming with Coding Samurai. 🎓 
+Welcome to the demonstration of the Task Manager project, developed during my internship in Python programming with Coding Samurai. 
 
 Overview of the Project:
 Task Manager is a Python-based application designed to streamline task management processes, aiding in organizing and prioritizing tasks efficiently.
